@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
       "greeting": "Xin chào, mình là",
       "name": "Lê Đức Việt",
       "role": "Junior Digital Marketing",
-      "subRole": "Junior Digital Marketing | 2+ YOE",
+      "subRole": "Sennior Digital Marketing | 2+ YOE",
       "bio": "Tối ưu hóa quảng cáo đa kênh và xây dựng phễu chuyển đổi bằng tư duy Data-Driven nhằm thúc đẩy doanh thu thực tế và nâng tầm nhận diện thương hiệu.",
       "btnProjects": "Khám phá dự án",
       "btnContact": "Liên hệ hợp tác",
@@ -571,15 +571,15 @@ const PORTFOLIO_DATA = {
       "formPhone": "Số điện thoại",
       "formService": "Năng lực / Hạng mục bạn quan tâm",
       "formServiceOpts": [
-        "Cơ hội việc làm (Full-time)",
-        "Performance Marketing (Meta Ads / TikTok Shop)",
-        "Affiliate & KOC Marketing",
-        "Market Planning & Growth Branding",
-        "Hợp tác khác"
+        "Chiến lược Digital Marketing đa kênh",
+        "Sản xuất Video Viral & Sáng tạo nội dung",
+        "Performance Ads & Tối ưu ROAS",
+        "Xây dựng thương hiệu & Định vị cá nhân",
+        "Hợp tác dự án khác"
       ],
       "formMessage": "Chia sẻ ngắn về dự án hoặc mục tiêu của bạn",
-      "btnSubmit": "Soạn Email Gửi Việt",
-      "btnSending": "Đang mở ứng dụng email...",
+      "btnSubmit": "Gửi Tin Nhắn Hợp Tác",
+      "btnSending": "Đang gửi đi...",
       "successMsg": "Ứng dụng email của bạn đã mở với nội dung soạn sẵn – chỉ cần bấm Gửi. Nếu không thấy, hãy email trực tiếp tới leducviet038@gmail.com."
     },
     "footer": {
@@ -1150,15 +1150,15 @@ const PORTFOLIO_DATA = {
       "formPhone": "Phone Number",
       "formService": "Core Capability of Interest",
       "formServiceOpts": [
-        "Job opportunity (Full-time)",
-        "Performance Marketing (Meta Ads / TikTok Shop)",
-        "Affiliate & KOC Marketing",
-        "Market Planning & Growth Branding",
-        "Other collaboration"
+        "Omnichannel Digital Strategy",
+        "Viral Video & Content Creation",
+        "Performance Ads & ROAS Optimization",
+        "Brand Strategy & Positioning",
+        "Custom Collaboration"
       ],
       "formMessage": "Tell me about your project goals or challenge",
-      "btnSubmit": "Compose Email to Viet",
-      "btnSending": "Opening your email app...",
+      "btnSubmit": "Send Project Message",
+      "btnSending": "Sending message...",
       "successMsg": "Your email app has opened with a pre-filled message – just hit Send. If nothing opened, email leducviet038@gmail.com directly."
     },
     "footer": {
