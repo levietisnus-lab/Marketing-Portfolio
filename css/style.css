@@ -3322,7 +3322,9 @@ body.light-theme .editor-bar-collapsed {
   transition:
     transform var(--h-dur) var(--h-ease),
     opacity calc(var(--h-dur) * 0.7) var(--h-ease);
-  will-change: transform, opacity;
+  /* No permanent will-change: keeping these tall panels on their own GPU layer made
+     Chrome mis-render the backdrop-filter badges in the hero (dark band across the
+     screen). The browser still promotes them automatically while they animate. */
 }
 
 .h-panel.is-active {
@@ -3495,6 +3497,11 @@ body.light-theme .h-bg-word {
 
 .h-mode .h-pager {
   display: flex;
+}
+
+/* Leave room under the footer so the fixed pager never covers "back to top" */
+.h-mode .footer {
+  padding-bottom: 5.5rem;
 }
 
 .h-pager-btn {
