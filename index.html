@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lê Đức Việt | Digital Marketing Executive – Performance & Growth</title>
+  <meta name="description"
+    content="Portfolio của Lê Đức Việt – Digital Marketing Executive: Meta Ads, TikTok Shop GMV Max, phễu lead B2B, Affiliate/KOC và Growth Branding với số liệu thực tế.">
+  <meta name="keywords"
+    content="Lê Đức Việt, Digital Marketing Executive, Performance Marketing, Meta Ads, TikTok Shop, GMV Max, Affiliate, Portfolio">
+  <meta name="author" content="Lê Đức Việt">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lê Đức Việt | Digital Marketing Executive – Performance & Growth">
+  <meta property="og:description"
+    content="6 case study thực chiến: phễu lead B2B, Market Planning, TikTok Shop GMV Max, Affiliate/KOC, Growth Branding và Content SEO.">
+  <meta property="og:image" content="assets/images/viet-avatar.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2300f2fe'/><text x='50%' y='65%' font-family='sans-serif' font-size='55' font-weight='900' fill='%2307080d' text-anchor='middle'>V</text></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Vendor Stylesheet: Cropper.js for image cropping -->
+  <link rel="stylesheet" href="assets/vendor/cropper.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Interactive Canvas & Glowing Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Cursor Glow Follower -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="brand-icon">V</div>
+        <div class="brand-text">LE DUC <span>VIET</span></div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Năng lực cốt lõi</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Dự án</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Kỹ năng</a>
+        <a href="#journey" class="nav-link" data-i18n="nav.journey">Hành trình</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Liên hệ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle (Dark / Light) -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Chuyển chế độ Sáng / Tối" title="Chuyển chế độ Sáng / Tối">
+          <i class="ri-moon-line theme-icon-dark"></i>
+          <i class="ri-sun-line theme-icon-light"></i>
+        </button>
+
+        <!-- Language Switcher -->
+        <div class="lang-toggle" id="lang-toggle" role="radiogroup" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="vi">VI</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <!-- CTA Resume Button -->
+        <a href="#contact" class="btn btn-primary btn-sm" id="nav-cta-btn" data-i18n="nav.cta">
+          <i class="ri-file-download-line"></i> Tải CV
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span id="hero-badge" data-i18n="hero.badge">Sẵn sàng nhận dự án mới & Hợp tác chiến lược</span>
+          </div>
+
+          <div class="hero-greeting" data-i18n="hero.greeting">Xin chào, mình là</div>
+          <h1 class="hero-title">
+            <span class="gradient-text" id="hero-name" data-i18n="hero.name">Lê Đức Việt</span>
+          </h1>
+
+          <div class="hero-subrole" id="hero-subrole" data-i18n="hero.subRole">
+            Junior Digital Marketing | 2+ Năm Kinh Nghiệm Thực Chiến
+          </div>
+
+          <p class="hero-bio" id="hero-bio" data-i18n="hero.bio">
+            Tối ưu hóa quảng cáo đa kênh và xây dựng phễu chuyển đổi bằng tư duy Data-Driven nhằm thúc đẩy doanh thu
+            thực tế và nâng tầm nhận diện thương hiệu.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects" data-i18n="hero.btnProjects">
+              <i class="ri-fire-line"></i> Khám phá dự án
+            </a>
+            <a href="#contact" class="btn btn-outline" id="hero-btn-contact" data-i18n="hero.btnContact">
+              <i class="ri-chat-smile-2-line"></i> Liên hệ hợp tác
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <img src="assets/images/viet-avatar.jpg" alt="Lê Đức Việt Portrait" class="avatar-img">
+
+            <!-- Floating Badge Top Left -->
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon">
+                <i class="ri-flashlight-line"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">Meta & TikTok Shop</span>
+                <span class="badge-subtitle">Performance Ads</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom Right -->
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon">
+                <i class="ri-verified-badge-line"></i>
+              </div>
+              <div class="badge-info">
+                <span class="badge-title">Lead → Close-won</span>
+                <span class="badge-subtitle">Full-Funnel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter Stats Strip -->
+      <div class="stats-strip" id="stats-strip">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-badge" data-i18n="about.tag">TRIẾT LÝ & ĐỊNH VỊ</div>
+          <h2 class="section-title" data-i18n="about.title">Kết nối Sức mạnh Dữ liệu cùng Nghệ thuật Kể chuyện</h2>
+          <p id="about-desc1" data-i18n="about.desc1">
+            Trong kỷ nguyên số bão hòa thông tin, một chiến dịch thành công không chỉ dừng lại ở chỉ số kỹ thuật hay hình ảnh bắt mắt đơn thuần. Đó là sự giao thoa hoàn hảo giữa phân tích dữ liệu hành vi (Data-Driven) và nội dung chạm cảm xúc (Emotional Storytelling).
+          </p>
+          <p id="about-desc2" data-i18n="about.desc2">
+            Với tư duy đa ngành (Omnichannel & Multi-disciplinary), Việt xây dựng hệ sinh thái tiếp thị toàn diện: từ nghiên cứu thị trường, hoạch định kênh phân phối, sản xuất video viral triệu view cho đến tối ưu hóa chi phí quảng cáo (ROAS) cao nhất cho doanh nghiệp.
+          </p>
+          <a href="#contact" class="btn btn-outline" style="margin-top: 0.5rem;">
+            <i class="ri-user-follow-line"></i> Cùng đồng hành phát triển
+          </a>
+        </div>
+
+        <div class="about-cards" id="about-values">
+          <!-- Rendered dynamically via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="services.tag">NĂNG LỰC CỐT LÕI</div>
+        <h2 class="section-title" data-i18n="services.title">Năng Lực Cốt Lõi</h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Hệ thống năng lực chiến lược và thực thi tăng trưởng
+          toàn diện cho thương hiệu.</p>
+      </div>
+
+      <div class="services-grid" id="services-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS / CASE STUDIES SECTION ==================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="projects.tag">CASE STUDIES THỰC CHIẾN</div>
+        <h2 class="section-title" data-i18n="projects.title">Những Chiến Dịch Tiêu Biểu</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Xem xét kỹ lưỡng bài toán, giải pháp chiến lược và kết
+          quả đo lường cụ thể.</p>
+      </div>
+
+      <!-- Project Filter Pills -->
+      <div class="project-filters" id="project-filters">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="skills.tag">NĂNG LỰC & CÔNG CỤ</div>
+        <h2 class="section-title" data-i18n="skills.title">Hệ Sinh Thái Kỹ Năng Đa Ngành</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Sự kết hợp giữa tư duy chiến lược tiếp thị, công nghệ số
+          và sáng tạo nghệ thuật.</p>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== JOURNEY / TIMELINE SECTION ==================== -->
+  <section class="section journey-section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="journey.tag">QUÁ TRÌNH PHÁT TRIỂN</div>
+        <h2 class="section-title" data-i18n="journey.title">Cột Mốc & Hành Trình Sự Nghiệp</h2>
+        <p class="section-subtitle" data-i18n="journey.subtitle">Từng bước tích lũy kinh nghiệm, vượt qua thử thách để
+          mang lại giá trị thực cho đối tác.</p>
+      </div>
+
+      <div class="journey-timeline" id="journey-timeline">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="contact.tag">KẾT NỐI & HỢP TÁC</div>
+        <h2 class="section-title" data-i18n="contact.title">Cùng Tạo Nên Đột Phá Mới</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Bạn có một dự án mới cần bùng nổ doanh số, hay muốn
+          trao đổi ý tưởng chiến lược tiếp thị? Đừng ngần ngại liên hệ ngay với Việt!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Contact Info Card -->
+        <div class="contact-info-card">
+          <h3 data-i18n="contact.infoTitle">Thông tin liên hệ trực tiếp</h3>
+
+          <div class="contact-channels">
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <i class="ri-mail-send-line"></i>
+              </div>
+              <div class="channel-detail">
+                <span>Email</span>
+                <a href="mailto:leducviet038@gmail.com" id="contact-email">leducviet038@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div class="channel-detail">
+                <span>Hotline / Zalo</span>
+                <a href="tel:+84932478949" id="contact-phone">0932 478 949</a>
+              </div>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div class="channel-detail">
+                <span>Location</span>
+                <p id="contact-location">Hà Nội / TP. Hồ Chí Minh / Remote</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social links hidden until real profile URLs are added (they pointed to generic homepages) -->
+          <!--
+          <div class="social-links" id="contact-socials">
+            <a href="https://linkedin.com/in/..." target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i
+                class="ri-linkedin-box-fill"></i></a>
+            <a href="https://facebook.com/..." target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i
+                class="ri-facebook-circle-fill"></i></a>
+          </div>
+          -->
+        </div>
+
+        <!-- Right Interactive Contact Form -->
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name" data-i18n="contact.formName">Họ và tên của bạn</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email" data-i18n="contact.formEmail">Địa chỉ Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="email@domain.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-phone" data-i18n="contact.formPhone">Số điện thoại</label>
+              <input type="tel" id="form-phone" class="form-input" placeholder="+84 ...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-service" data-i18n="contact.formService">Năng lực / Hạng mục bạn quan
+                tâm</label>
+              <select id="form-service" class="form-select">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message" data-i18n="contact.formMessage">Chia sẻ ngắn về dự án hoặc
+                mục tiêu của bạn</label>
+              <textarea id="form-message" class="form-textarea"
+                placeholder="Nội dung yêu cầu hoặc thông điệp của bạn..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">
+              <i class="ri-send-plane-2-line"></i> <span data-i18n="contact.btnSubmit">Gửi Tin Nhắn Hợp Tác</span>
+            </button>
+
+            <div class="form-status" id="form-status">
+              <i class="ri-checkbox-circle-line"></i>
+              <span id="form-status-text">Cảm ơn bạn! Tin nhắn đã được gửi thành công.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="footer-copy" data-i18n="footer.copyright">© 2026 Lê Đức Việt. All rights reserved. Crafted with passion
+        & modern web technologies.</p>
+      <a href="#home" class="back-to-top-btn">
+        <i class="ri-arrow-up-line"></i> <span data-i18n="footer.backToTop">Lên đầu trang</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ==================== CASE STUDY MODAL ==================== -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <div class="modal-image-box">
+        <img id="modal-img" src="" alt="Project Case Study Preview">
+      </div>
+
+      <div class="modal-content-body">
+        <div class="modal-header-meta">
+          <span class="modal-category" id="modal-category">CAMPAIGN</span>
+          <span class="project-hero-metric" id="modal-hero-metric">+2.8M Reach</span>
+        </div>
+
+        <h2 class="modal-title" id="modal-title">Tên chiến dịch</h2>
+
+        <!-- Role & Timeline -->
+        <div class="modal-role-row" id="modal-role-row">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="modal-metrics-grid" id="modal-metrics-grid">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Objective & Challenge -->
+        <div class="modal-section">
+          <h3 id="modal-challenge-title"><i class="ri-flag-2-line"></i> Bối Cảnh & Bài Toán Đặt Ra</h3>
+          <p id="modal-objective">Nội dung bài toán...</p>
+        </div>
+
+        <!-- Strategy List -->
+        <div class="modal-section">
+          <h3 id="modal-strategy-title"><i class="ri-compass-3-line"></i> Chiến Lược & Giải Pháp Triển Khai</h3>
+          <ul class="modal-strategy-list" id="modal-strategy-list">
+            <!-- Strategy items -->
+          </ul>
+        </div>
+
+        <!-- Learnings & Next Steps -->
+        <div class="modal-section" id="modal-learnings-section">
+          <h3 id="modal-learnings-title"><i class="ri-lightbulb-flash-line"></i> Bài Học & Bước Tiếp Theo</h3>
+          <ul class="modal-learnings-list" id="modal-learnings-list">
+            <!-- Learning items -->
+          </ul>
+        </div>
+
+        <!-- Tags -->
+        <div class="modal-tags-row" id="modal-tags-row">
+          <!-- Tags list -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== IMAGE CROPPER & VIEWPORT ADJUSTER MODAL ==================== -->
+  <div class="cropper-modal-backdrop" id="image-cropper-modal" aria-hidden="true">
+    <div class="cropper-modal-container">
+      <!-- Modal Header -->
+      <div class="cropper-modal-header">
+        <div class="cropper-header-title-wrap">
+          <div class="cropper-header-badge"><i class="ri-crop-2-line"></i> STUDIO CĂN CHỈNH ẢNH</div>
+          <h3 class="cropper-modal-title" id="cropper-title">Điều Chỉnh Vùng Hiển Thị Của Ảnh</h3>
+          <p class="cropper-modal-subtitle">Kéo khung hoặc rê ảnh để chọn vị trí ưng ý nhất, phóng to/thu nhỏ để vừa vặn khung hình.</p>
+        </div>
+        <div class="cropper-header-actions">
+          <button type="button" class="cropper-tool-btn" id="cropper-change-file-btn" title="Chọn tệp ảnh khác từ máy tính">
+            <i class="ri-folder-upload-line"></i> <span>Tải ảnh khác</span>
+          </button>
+          <button class="cropper-modal-close" id="cropper-close-btn" title="Đóng mà không lưu">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="cropper-modal-body">
+        <!-- Main Canvas Viewport Area -->
+        <div class="cropper-stage-area">
+          <div class="cropper-img-wrapper" id="cropper-img-wrapper">
+            <img id="cropper-active-image" src="" alt="Căn chỉnh ảnh">
+          </div>
+          <div class="cropper-stage-hint">
+            <i class="ri-drag-move-2-line"></i> Rê chuột/kéo ảnh để dịch chuyển vị trí • Lăn chuột để phóng to / thu nhỏ
+          </div>
+        </div>
+
+        <!-- Sidebar Controls Pane -->
+        <div class="cropper-controls-sidebar">
+          <!-- Live Preview Box -->
+          <div class="cropper-control-group">
+            <label class="cropper-group-label"><i class="ri-eye-line"></i> XEM TRƯỚC HIỂN THỊ THỰC TẾ</label>
+            <div class="cropper-preview-container">
+              <div class="cropper-preview-box" id="cropper-preview-box">
+                <div class="cropper-live-preview" id="cropper-live-preview"></div>
+              </div>
+              <span class="cropper-preview-caption" id="cropper-preview-caption">Hiển thị trên giao diện</span>
+            </div>
+          </div>
+
+          <!-- Aspect Ratio Presets -->
+          <div class="cropper-control-group">
+            <label class="cropper-group-label"><i class="ri-aspect-ratio-line"></i> TỈ LỆ KHUNG HÌNH</label>
+            <div class="cropper-ratio-btn-group" id="cropper-ratio-group">
+              <button type="button" class="cropper-ratio-btn active" data-ratio="1" id="cropper-ratio-1-1">
+                <i class="ri-square-line"></i> 1:1 (Avatar)
+              </button>
+              <button type="button" class="cropper-ratio-btn" data-ratio="1.7777777777777777" id="cropper-ratio-16-9">
+                <i class="ri-tv-line"></i> 16:9 (Dự án)
+              </button>
+              <button type="button" class="cropper-ratio-btn" data-ratio="1.3333333333333333" id="cropper-ratio-4-3">
+                <i class="ri-layout-masonry-line"></i> 4:3
+              </button>
+              <button type="button" class="cropper-ratio-btn" data-ratio="NaN" id="cropper-ratio-free">
+                <i class="ri-shape-line"></i> Tự do
+              </button>
+            </div>
+          </div>
+
+          <!-- Zoom Slider -->
+          <div class="cropper-control-group">
+            <div class="cropper-label-with-val">
+              <label class="cropper-group-label"><i class="ri-zoom-in-line"></i> THU PHÓNG (ZOOM)</label>
+              <span class="cropper-val-badge" id="cropper-zoom-val">100%</span>
+            </div>
+            <div class="cropper-slider-row">
+              <button type="button" class="cropper-tool-btn cropper-btn-sm" id="cropper-zoom-out-btn" title="Thu nhỏ"><i class="ri-subtract-line"></i></button>
+              <input type="range" class="cropper-range-slider" id="cropper-zoom-slider" min="0.2" max="3" step="0.05" value="1">
+              <button type="button" class="cropper-tool-btn cropper-btn-sm" id="cropper-zoom-in-btn" title="Phóng to"><i class="ri-add-line"></i></button>
+            </div>
+          </div>
+
+          <!-- Quick Tools (Rotate, Flip, Reset) -->
+          <div class="cropper-control-group">
+            <label class="cropper-group-label"><i class="ri-tools-line"></i> CÔNG CỤ NHANH</label>
+            <div class="cropper-quick-tools-grid">
+              <button type="button" class="cropper-tool-btn" id="cropper-rot-left-btn" title="Xoay trái 90°">
+                <i class="ri-anticlockwise-2-line"></i> <span>Xoay -90°</span>
+              </button>
+              <button type="button" class="cropper-tool-btn" id="cropper-rot-right-btn" title="Xoay phải 90°">
+                <i class="ri-clockwise-2-line"></i> <span>Xoay +90°</span>
+              </button>
+              <button type="button" class="cropper-tool-btn" id="cropper-flip-x-btn" title="Lật gương ngang">
+                <i class="ri-swap-line"></i> <span>Lật ngang</span>
+              </button>
+              <button type="button" class="cropper-tool-btn" id="cropper-reset-btn" title="Khôi phục mặc định">
+                <i class="ri-restart-line"></i> <span>Đặt lại</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="cropper-modal-footer">
+        <button type="button" class="cropper-action-btn cropper-btn-cancel" id="cropper-cancel-btn">
+          <i class="ri-close-circle-line"></i> <span>Hủy bỏ</span>
+        </button>
+        <button type="button" class="cropper-action-btn cropper-btn-apply" id="cropper-apply-btn">
+          <i class="ri-check-line"></i> <span>ÁP DỤNG & CẮT VÙNG NÀY</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/cropper.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/editor.js"></script>
+</body>
+
+</html>
