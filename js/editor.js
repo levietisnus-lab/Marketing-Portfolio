@@ -14,6 +14,15 @@
   let activeCropperInstance = null;
   let cropperScaleX = 1;
   let cropperScaleY = 1;
+  // Fingerprint of js/data.js as loaded from disk, used to tell whether a browser draft is stale
+  let fileDataHash = '';
+
+  function hashData(obj) {
+    const str = JSON.stringify(obj);
+    let h = 5381;
+    for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0;
+    return String(h >>> 0);
+  }
 
   // Helper: Get active language
   function getActiveLang() {
@@ -1513,9 +1522,15 @@
         console.warn('Server backend save-content API unavailable, falling back to localStorage', saveErr);
       }
 
-      // 3. Client-side LocalStorage Backup
+      // 3. Client-side LocalStorage backup, only when the file could not be written.
+      // Once data.js holds the content, a browser copy would just shadow future file changes.
       try {
-        localStorage.setItem('portfolio_custom_data', JSON.stringify(PORTFOLIO_DATA));
+        if (serverSaved) {
+          localStorage.removeItem('portfolio_custom_data');
+          fileDataHash = hashData(PORTFOLIO_DATA); // data.js now matches what is on screen
+        } else {
+          localStorage.setItem('portfolio_custom_data', JSON.stringify({ __base: fileDataHash, data: PORTFOLIO_DATA }));
+        }
       } catch (lsErr) {
         console.warn('LocalStorage save error:', lsErr);
       }
@@ -1594,9 +1609,18 @@
   // Load custom data from localStorage if available on page load
   function loadStoredData() {
     try {
+      if (typeof PORTFOLIO_DATA !== 'undefined') fileDataHash = hashData(PORTFOLIO_DATA);
       const stored = localStorage.getItem('portfolio_custom_data');
       if (stored) {
-        const parsed = JSON.parse(stored);
+        const draft = JSON.parse(stored);
+        // A draft only applies on top of the exact data.js it was made from. If data.js changed
+        // since (edited by hand, pulled from git, or saved via the server), the draft is stale and
+        // re-applying it would silently revert those newer changes on the next save.
+        if (!draft || draft.__base !== fileDataHash || !draft.data) {
+          localStorage.removeItem('portfolio_custom_data');
+          return;
+        }
+        const parsed = draft.data;
         if (parsed && typeof PORTFOLIO_DATA !== 'undefined') {
           const normalizeProjCategory = (p) => {
             if (!p || !p.category) return;

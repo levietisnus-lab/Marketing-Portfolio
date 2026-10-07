@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
       "greeting": "Xin chào, mình là",
       "name": "Lê Đức Việt",
       "role": "Junior Digital Marketing",
-      "subRole": "Sennior Digital Marketing | 2+ YOE",
+      "subRole": "Senior Digital Marketing | 2+ YOE",
       "bio": "Tối ưu hóa quảng cáo đa kênh và xây dựng phễu chuyển đổi bằng tư duy Data-Driven nhằm thúc đẩy doanh thu thực tế và nâng tầm nhận diện thương hiệu.",
       "btnProjects": "Khám phá dự án",
       "btnContact": "Liên hệ hợp tác",
@@ -584,7 +584,7 @@ const PORTFOLIO_DATA = {
   "en": {
     "nav": {
       "about": "About",
-      "services": "Core Capabilities",
+      "services": "Core Competencies",
       "projects": "Case Studies",
       "skills": "Skills",
       "journey": "Journey",
@@ -596,7 +596,7 @@ const PORTFOLIO_DATA = {
       "greeting": "Hello, I am",
       "name": "Le Duc Viet",
       "role": "Junior Digital Marketing",
-      "subRole": "Junior Digital Marketing | 2 YOE",
+      "subRole": "Senior Digital Marketing | 2+ YOE",
       "bio": "Data-driven Executive specializing in multi-channel ad optimization and conversion funnels to drive tangible revenue growth and elevate brand awareness.",
       "btnProjects": "Explore Case Studies",
       "btnContact": "Get In Touch",
@@ -645,8 +645,8 @@ const PORTFOLIO_DATA = {
       ]
     },
     "services": {
-      "tag": "CORE CAPABILITIES",
-      "title": "Core Capabilities",
+      "tag": "CORE COMPETENCIES",
+      "title": "Core Competencies",
       "subtitle": "Strategic competencies and high-impact execution driving exponential growth.",
       "items": [
         {
@@ -697,8 +697,8 @@ const PORTFOLIO_DATA = {
     },
     "projects": {
       "tag": "MEASURABLE IMPACT",
-      "title": "Case Studies by Core Capability",
-      "subtitle": "Each case maps to one core capability: context, my role, the strategy, and real measured results.",
+      "title": "Case Studies by Core Competency",
+      "subtitle": "Each case maps to one core competency: context, my role, the strategy, and real measured results.",
       "filterAll": "All",
       "filterCategories": {
         "performance": "Performance Ads",
@@ -1118,7 +1118,7 @@ const PORTFOLIO_DATA = {
       "formName": "Your Full Name",
       "formEmail": "Email Address",
       "formPhone": "Phone Number",
-      "formService": "Core Capability of Interest",
+      "formService": "Core Competency of Interest",
       "formServiceOpts": [
         "Omnichannel Digital Strategy",
         "Viral Video & Content Creation",
