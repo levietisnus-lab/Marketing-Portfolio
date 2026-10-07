@@ -596,7 +596,7 @@ const PORTFOLIO_DATA = {
       "greeting": "Hello, I am",
       "name": "Le Duc Viet",
       "role": "Junior Digital Marketing",
-      "subRole": "Junior Digital Marketing | 2 YOE",
+      "subRole": "Senior Digital Marketing | 2+ YOE",
       "bio": "Data-driven Executive specializing in multi-channel ad optimization and conversion funnels to drive tangible revenue growth and elevate brand awareness.",
       "btnProjects": "Explore Case Studies",
       "btnContact": "Get In Touch",
