@@ -20,7 +20,7 @@ const PORTFOLIO_DATA = {
       "greeting": "Xin chào, mình là",
       "name": "Lê Đức Việt",
       "role": "Junior Digital Marketing",
-      "subRole": "Sennior Digital Marketing | 2+ YOE",
+      "subRole": "Senior Digital Marketing | 2+ YOE",
       "bio": "Tối ưu hóa quảng cáo đa kênh và xây dựng phễu chuyển đổi bằng tư duy Data-Driven nhằm thúc đẩy doanh thu thực tế và nâng tầm nhận diện thương hiệu.",
       "btnProjects": "Khám phá dự án",
       "btnContact": "Liên hệ hợp tác",
