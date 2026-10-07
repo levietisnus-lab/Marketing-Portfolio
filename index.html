@@ -93,6 +93,10 @@
     </div>
   </header>
 
+  <!-- Horizontal parallax track: each section is a panel that slides in from the side -->
+  <main class="h-viewport" id="h-viewport">
+  <div class="h-track" id="h-track">
+
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero" id="home">
     <div class="container">
@@ -270,7 +274,7 @@
           trao đổi ý tưởng chiến lược tiếp thị? Đừng ngần ngại liên hệ ngay với Việt!</p>
       </div>
 
-      <div class="contact-grid">
+      <div class="contact-grid contact-grid--single">
         <!-- Left Contact Info Card -->
         <div class="contact-info-card">
           <h3 data-i18n="contact.infoTitle">Thông tin liên hệ trực tiếp</h3>
@@ -282,7 +286,8 @@
               </div>
               <div class="channel-detail">
                 <span>Email</span>
-                <a href="mailto:leducviet038@gmail.com" id="contact-email">leducviet038@gmail.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=leducviet038@gmail.com" target="_blank"
+                  rel="noopener" id="contact-email">leducviet038@gmail.com</a>
               </div>
             </div>
 
@@ -292,7 +297,7 @@
               </div>
               <div class="channel-detail">
                 <span>Hotline / Zalo</span>
-                <a href="tel:+84932478949" id="contact-phone">0932 478 949</a>
+                <a href="https://zalo.me/0932478949" target="_blank" rel="noopener" id="contact-phone">0932 478 949</a>
               </div>
             </div>
 
@@ -302,69 +307,36 @@
               </div>
               <div class="channel-detail">
                 <span>Location</span>
-                <p id="contact-location">Hà Nội / TP. Hồ Chí Minh / Remote</p>
+                <p id="contact-location">Hồ Chí Minh / Remote</p>
+              </div>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">
+                <i class="ri-linkedin-box-line"></i>
+              </div>
+              <div class="channel-detail">
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/viet-le-duc-64a167353/" target="_blank" rel="noopener"
+                  id="contact-linkedin">Lê Đức Việt</a>
               </div>
             </div>
           </div>
-
-          <div class="social-links" id="contact-socials">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i
-                class="ri-linkedin-box-fill"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i
-                class="ri-facebook-circle-fill"></i></a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok"><i
-                class="ri-tiktok-fill"></i></a>
-            <a href="https://behance.net" target="_blank" rel="noopener" class="social-btn" aria-label="Behance"><i
-                class="ri-behance-fill"></i></a>
-          </div>
-        </div>
-
-        <!-- Right Interactive Contact Form -->
-        <div class="contact-form-card">
-          <form id="contact-form">
-            <div class="form-group">
-              <label class="form-label" for="form-name" data-i18n="contact.formName">Họ và tên của bạn</label>
-              <input type="text" id="form-name" class="form-input" placeholder="Nguyễn Văn A" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="form-email" data-i18n="contact.formEmail">Địa chỉ Email</label>
-              <input type="email" id="form-email" class="form-input" placeholder="email@domain.com" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="form-phone" data-i18n="contact.formPhone">Số điện thoại</label>
-              <input type="tel" id="form-phone" class="form-input" placeholder="+84 ...">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="form-service" data-i18n="contact.formService">Năng lực / Hạng mục bạn quan
-                tâm</label>
-              <select id="form-service" class="form-select">
-                <!-- Dynamically populated -->
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="form-message" data-i18n="contact.formMessage">Chia sẻ ngắn về dự án hoặc
-                mục tiêu của bạn</label>
-              <textarea id="form-message" class="form-textarea"
-                placeholder="Nội dung yêu cầu hoặc thông điệp của bạn..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">
-              <i class="ri-send-plane-2-line"></i> <span data-i18n="contact.btnSubmit">Gửi Tin Nhắn Hợp Tác</span>
-            </button>
-
-            <div class="form-status" id="form-status">
-              <i class="ri-checkbox-circle-line"></i>
-              <span id="form-status-text">Cảm ơn bạn! Tin nhắn đã được gửi thành công.</span>
-            </div>
-          </form>
         </div>
       </div>
     </div>
   </section>
+
+  </div>
+  </main>
+
+  <!-- Horizontal panel pager (prev / dots / next) -->
+  <nav class="h-pager" id="h-pager" aria-label="Chuyển phần">
+    <button type="button" class="h-pager-btn" id="h-prev" aria-label="Phần trước"><i class="ri-arrow-left-s-line"></i></button>
+    <span class="h-pager-count" id="h-count" aria-live="polite">01 / 07</span>
+    <div class="h-pager-dots" id="h-dots"></div>
+    <button type="button" class="h-pager-btn" id="h-next" aria-label="Phần sau"><i class="ri-arrow-right-s-line"></i></button>
+  </nav>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
@@ -550,6 +522,7 @@
   <script src="assets/vendor/cropper.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/parallax-tabs.js"></script>
   <script src="js/editor.js"></script>
 </body>
 

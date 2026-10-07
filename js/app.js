@@ -37,11 +37,6 @@
   const skillsGrid = document.getElementById('skills-grid');
   const journeyTimeline = document.getElementById('journey-timeline');
 
-  const contactForm = document.getElementById('contact-form');
-  const formServiceSelect = document.getElementById('form-service');
-  const formStatus = document.getElementById('form-status');
-  const formStatusText = document.getElementById('form-status-text');
-  const formSubmitBtn = document.getElementById('form-submit-btn');
 
   const modalBackdrop = document.getElementById('case-study-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -107,17 +102,6 @@
         btn.classList.remove('active');
       }
     });
-
-    // Update Contact Form Select Options
-    if (formServiceSelect) {
-      formServiceSelect.innerHTML = '';
-      dict.contact.formServiceOpts.forEach(opt => {
-        const optEl = document.createElement('option');
-        optEl.value = opt;
-        optEl.textContent = opt;
-        formServiceSelect.appendChild(optEl);
-      });
-    }
 
     // Update Hero Avatar Image from data if present
     const avatarEl = document.querySelector('.avatar-wrapper img');
@@ -642,7 +626,8 @@
       navbar.classList.remove('scrolled');
     }
 
-    // ScrollSpy
+    // ScrollSpy (horizontal panel mode sets the active link itself, see parallax-tabs.js)
+    if (document.body.classList.contains('h-mode')) return;
     const sections = document.querySelectorAll('section[id]');
     let currentId = '';
     sections.forEach(sec => {
@@ -679,41 +664,6 @@
       if (icon) icon.className = 'ri-menu-4-line';
     });
   });
-
-  // --- 8. INTERACTIVE CONTACT FORM ---
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const dict = getDict();
-      formSubmitBtn.disabled = true;
-      formSubmitBtn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> ${dict.contact.btnSending}`;
-
-      // No backend: hand the message to the visitor's email client so it actually reaches the inbox
-      const val = (id) => (document.getElementById(id)?.value || '').trim();
-      const subject = `[Portfolio] ${val('form-service')} – ${val('form-name')}`;
-      const body = [
-        val('form-message'),
-        '',
-        '---',
-        `${dict.contact.formName}: ${val('form-name')}`,
-        `Email: ${val('form-email')}`,
-        `${dict.contact.formPhone}: ${val('form-phone')}`
-      ].join('\n');
-      window.location.href = `mailto:${dict.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      setTimeout(() => {
-        formSubmitBtn.disabled = false;
-        formSubmitBtn.innerHTML = `<i class="ri-check-line"></i> ${dict.contact.btnSubmit}`;
-        formStatus.className = 'form-status success';
-        formStatusText.textContent = dict.contact.successMsg;
-        contactForm.reset();
-
-        setTimeout(() => {
-          formStatus.className = 'form-status';
-        }, 6000);
-      }, 1000);
-    });
-  }
 
   // --- 9. INTERACTIVE CURSOR GLOW FOLLOWER ---
   let mouseX = window.innerWidth / 2;

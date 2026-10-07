@@ -422,7 +422,7 @@ const PORTFOLIO_DATA = {
     },
     "skills": {
       "tag": "NĂNG LỰC & CÔNG CỤ",
-      "title": "Hệ Sinh Thái Kỹ Năng Đa Ngành",
+      "title": "Hệ Thống Kỹ Năng Đa Ngành",
       "subtitle": "Những kỹ năng và công cụ đã dùng thực tế trong các case study bên trên.",
       "groups": [
         {
@@ -543,27 +543,12 @@ const PORTFOLIO_DATA = {
       "infoTitle": "Thông tin liên hệ trực tiếp",
       "email": "leducviet038@gmail.com",
       "phone": "0932 478 949",
-      "location": "Hà Nội / TP. Hồ Chí Minh / Làm việc từ xa (Remote)",
+      "location": "Hồ Chí Minh / Remote",
       "socials": [
         {
           "name": "LinkedIn",
-          "url": "https://linkedin.com",
+          "url": "https://www.linkedin.com/in/viet-le-duc-64a167353/",
           "icon": "ri-linkedin-box-fill"
-        },
-        {
-          "name": "Facebook",
-          "url": "https://facebook.com",
-          "icon": "ri-facebook-circle-fill"
-        },
-        {
-          "name": "TikTok",
-          "url": "https://tiktok.com",
-          "icon": "ri-tiktok-fill"
-        },
-        {
-          "name": "Behance",
-          "url": "https://behance.net",
-          "icon": "ri-behance-fill"
         }
       ],
       "formName": "Họ và tên của bạn",
@@ -599,7 +584,7 @@ const PORTFOLIO_DATA = {
   "en": {
     "nav": {
       "about": "About",
-      "services": "Core Capabilities",
+      "services": "Core Competencies",
       "projects": "Case Studies",
       "skills": "Skills",
       "journey": "Journey",
@@ -660,8 +645,8 @@ const PORTFOLIO_DATA = {
       ]
     },
     "services": {
-      "tag": "CORE CAPABILITIES",
-      "title": "Core Capabilities",
+      "tag": "CORE COMPETENCIES",
+      "title": "Core Competencies",
       "subtitle": "Strategic competencies and high-impact execution driving exponential growth.",
       "items": [
         {
@@ -712,8 +697,8 @@ const PORTFOLIO_DATA = {
     },
     "projects": {
       "tag": "MEASURABLE IMPACT",
-      "title": "Case Studies by Core Capability",
-      "subtitle": "Each case maps to one core capability: context, my role, the strategy, and real measured results.",
+      "title": "Case Studies by Core Competency",
+      "subtitle": "Each case maps to one core competency: context, my role, the strategy, and real measured results.",
       "filterAll": "All",
       "filterCategories": {
         "performance": "Performance Ads",
@@ -1122,33 +1107,18 @@ const PORTFOLIO_DATA = {
       "infoTitle": "Direct Contact Channels",
       "email": "leducviet038@gmail.com",
       "phone": "0932 478 949",
-      "location": "Hanoi / Ho Chi Minh City / Remote Worldwide",
+      "location": "Ho Chi Minh City / Remote",
       "socials": [
         {
           "name": "LinkedIn",
-          "url": "https://linkedin.com",
+          "url": "https://www.linkedin.com/in/viet-le-duc-64a167353/",
           "icon": "ri-linkedin-box-fill"
-        },
-        {
-          "name": "Facebook",
-          "url": "https://facebook.com",
-          "icon": "ri-facebook-circle-fill"
-        },
-        {
-          "name": "TikTok",
-          "url": "https://tiktok.com",
-          "icon": "ri-tiktok-fill"
-        },
-        {
-          "name": "Behance",
-          "url": "https://behance.net",
-          "icon": "ri-behance-fill"
         }
       ],
       "formName": "Your Full Name",
       "formEmail": "Email Address",
       "formPhone": "Phone Number",
-      "formService": "Core Capability of Interest",
+      "formService": "Core Competency of Interest",
       "formServiceOpts": [
         "Omnichannel Digital Strategy",
         "Viral Video & Content Creation",

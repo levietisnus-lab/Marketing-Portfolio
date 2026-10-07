@@ -1319,6 +1319,13 @@ button {
   align-items: flex-start;
 }
 
+/* Contact section without the form: center the info card */
+.contact-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 .contact-info-card {
   padding: 2.5rem;
   background: var(--bg-card);
@@ -3279,3 +3286,341 @@ body.light-theme .editor-bar-collapsed {
   box-shadow: 0 10px 30px rgba(7, 79, 161, 0.2), 0 0 20px rgba(0, 242, 254, 0.25) !important;
 }
 
+
+/* ==================== HORIZONTAL PARALLAX TABS ==================== */
+/* Slider-style parallax (inspired by Dribbble "parallax slider" shots):
+   - panels are stacked; the incoming one slides in at full speed while the
+     outgoing one recedes slower (shift + scale + fade) => depth between slides
+   - a giant outlined word sits behind each section and travels faster than
+     the content (horizontal) and slower than the page (vertical scroll)
+   - headings reveal through a mask, cards enter in a stagger
+   js/parallax-tabs.js toggles is-active / is-prev / is-next / is-entering and
+   sets --offset (panel index - active index), --sy (scrollY) and --h-index. */
+:root {
+  --h-dur: 1.05s;
+  --h-ease: cubic-bezier(0.77, 0, 0.18, 1);
+  --h-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.h-viewport {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  overflow: clip; /* unlike hidden, cannot be scrolled sideways by #hash jumps or focus */
+  transition: height 0.7s var(--h-ease);
+}
+
+.h-track {
+  display: grid;
+}
+
+.h-panel {
+  grid-area: 1 / 1;
+  align-self: start;
+  min-width: 0;
+  transform-origin: 50% 30vh;
+  transition:
+    transform var(--h-dur) var(--h-ease),
+    opacity calc(var(--h-dur) * 0.7) var(--h-ease);
+  will-change: transform, opacity;
+}
+
+.h-panel.is-active {
+  z-index: 2;
+  transform: none;
+  opacity: 1;
+}
+
+/* Left of the active panel: pushed back into depth */
+.h-panel.is-prev {
+  z-index: 1;
+  transform: translate3d(-32%, 0, 0) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Right of the active panel: waiting off-screen, slides over when called */
+.h-panel.is-next {
+  z-index: 3;
+  transform: translate3d(100%, 0, 0);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Panels not involved in the current move jump without crossing the screen */
+.h-panel.h-skip {
+  transition: none;
+}
+
+/* ---------- Giant background word ---------- */
+.h-bg-word {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: min(clamp(4.5rem, 15vw, 14rem), calc(150vw / var(--chars, 8)));
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 242, 254, 0.16);
+  --depth: 0.9;
+}
+
+.hero .h-bg-word {
+  top: 50%;
+  margin-top: -0.6em;
+  -webkit-text-stroke-color: rgba(0, 242, 254, 0.1);
+}
+
+.h-panel > .container {
+  position: relative;
+  z-index: 1;
+}
+
+body.light-theme .h-bg-word {
+  -webkit-text-stroke-color: rgba(7, 79, 161, 0.14);
+}
+
+/* ---------- Depth layers (horizontal) ---------- */
+/* Higher --depth = travels further than its panel, so layers separate while
+   sliding and converge when the panel settles */
+.h-mode .section-badge { --depth: 0.6; }
+.h-mode .section-title { --depth: 0.38; }
+.h-mode .section-subtitle { --depth: 0.22; }
+.h-mode .project-filters { --depth: 0.3; }
+.h-mode .services-grid,
+.h-mode .projects-grid,
+.h-mode .skills-grid,
+.h-mode .journey-timeline,
+.h-mode .contact-grid { --depth: 0.12; }
+.h-mode .hero-content { --depth: 0.18; }
+.h-mode .hero-visual { --depth: 0.55; }
+.h-mode .stats-strip { --depth: 0.32; }
+.h-mode .about-text { --depth: 0.15; }
+.h-mode .about-cards { --depth: 0.5; }
+
+.h-mode :is(.section-badge, .section-title, .section-subtitle, .project-filters,
+  .services-grid, .projects-grid, .skills-grid, .journey-timeline, .contact-grid,
+  .hero-content, .hero-visual, .stats-strip, .about-text, .about-cards) {
+  translate: calc(var(--offset, 0) * var(--depth, 0) * 35vw) 0;
+  transition: translate var(--h-dur) var(--h-ease);
+}
+
+/* The background word also lags behind vertical scrolling (classic parallax) */
+.h-mode .h-bg-word {
+  translate: calc(var(--offset, 0) * var(--depth) * 35vw) calc(var(--sy, 0px) * 0.45);
+  transition: translate var(--h-dur) var(--h-ease);
+}
+
+/* Once the slide has settled, follow scrolling directly instead of easing */
+.h-mode .h-panel.is-active:not(.is-entering) .h-bg-word {
+  transition: none;
+}
+
+/* Hero portrait drifts slightly slower than the page on scroll */
+.h-mode .hero.is-active .avatar-wrapper {
+  translate: 0 calc(var(--sy, 0px) * 0.12);
+}
+
+/* ---------- Entrance: masked headings + staggered cards ---------- */
+@keyframes hMaskRise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 0 -20% 0);
+  }
+}
+
+@keyframes hCardIn {
+  from {
+    opacity: 0;
+    translate: 70px 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.h-panel.is-entering :is(.section-badge, .section-title, .section-subtitle,
+  .status-badge, .hero-greeting, .hero-title, .hero-subrole, .hero-bio, .hero-cta) {
+  animation: hMaskRise 0.9s var(--h-ease-out) backwards;
+}
+
+.h-panel.is-entering .section-badge,
+.h-panel.is-entering .status-badge { animation-delay: 0.35s; }
+.h-panel.is-entering .section-title,
+.h-panel.is-entering .hero-greeting { animation-delay: 0.45s; }
+.h-panel.is-entering .section-subtitle,
+.h-panel.is-entering .hero-title { animation-delay: 0.55s; }
+.h-panel.is-entering .hero-subrole { animation-delay: 0.65s; }
+.h-panel.is-entering .hero-bio { animation-delay: 0.72s; }
+.h-panel.is-entering .hero-cta { animation-delay: 0.8s; }
+
+.h-panel.is-entering :is(.service-card, .project-card, .skill-category-card,
+  .timeline-item, .value-card, .contact-info-card, .stat-item, .filter-btn) {
+  animation: hCardIn 0.9s var(--h-ease-out) backwards;
+  animation-delay: calc(0.5s + var(--i, 0) * 70ms);
+}
+
+/* ---------- Pager: prev / count / dots / next ---------- */
+.h-pager {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 900;
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.h-mode .h-pager {
+  display: flex;
+}
+
+.h-pager-btn {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  background: rgba(0, 242, 254, 0.08);
+  color: var(--cyan);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.h-pager-btn:hover:not(:disabled) {
+  background: rgba(0, 242, 254, 0.2);
+}
+
+.h-pager-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.h-pager-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.25rem;
+}
+
+.h-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: width 0.35s var(--h-ease), background 0.35s ease;
+}
+
+.h-dot.active {
+  width: 22px;
+  background: var(--cyan);
+}
+
+/* Section counter, e.g. 03 / 07 */
+.h-pager-count {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 0 0.35rem;
+  min-width: 3.6em;
+  text-align: center;
+}
+
+body.light-theme .h-pager {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(7, 79, 161, 0.2);
+  box-shadow: 0 10px 30px rgba(7, 79, 161, 0.15);
+}
+
+body.light-theme .h-pager-btn {
+  color: #074fa1;
+  border-color: rgba(7, 79, 161, 0.25);
+  background: rgba(7, 79, 161, 0.06);
+}
+
+body.light-theme .h-dot {
+  background: rgba(7, 79, 161, 0.25);
+}
+
+body.light-theme .h-dot.active {
+  background: #074fa1;
+}
+
+/* Background glow drifts slowly against the direction of travel */
+.h-mode .glow-orb {
+  transition: translate 1.4s var(--h-ease);
+}
+.h-mode .glow-orb-1 { translate: calc(var(--h-index, 0) * -45px) 0; }
+.h-mode .glow-orb-2 { translate: calc(var(--h-index, 0) * -25px) 0; }
+.h-mode .glow-orb-3 { translate: calc(var(--h-index, 0) * -70px) 0; }
+
+/* First paint / deep links: jump without animating the slide itself */
+.h-no-anim .h-viewport,
+.h-no-anim .h-panel,
+.h-no-anim .glow-orb,
+.h-no-anim .h-panel :is(.section-badge, .section-title, .section-subtitle, .project-filters,
+  .services-grid, .projects-grid, .skills-grid, .journey-timeline, .contact-grid,
+  .hero-content, .hero-visual, .stats-strip, .about-text, .about-cards, .h-bg-word) {
+  transition: none !important;
+}
+
+@media (max-width: 768px) {
+  .h-pager {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 1rem;
+  }
+
+  .h-pager-count {
+    display: none;
+  }
+
+  .h-bg-word {
+    top: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .h-viewport,
+  .h-panel,
+  .h-mode .glow-orb,
+  .h-mode .h-bg-word,
+  .h-mode :is(.section-badge, .section-title, .section-subtitle, .project-filters,
+    .services-grid, .projects-grid, .skills-grid, .journey-timeline, .contact-grid,
+    .hero-content, .hero-visual, .stats-strip, .about-text, .about-cards) {
+    transition: none !important;
+  }
+
+  .h-panel.is-entering * {
+    animation: none !important;
+  }
+}
