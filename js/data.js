@@ -46,7 +46,7 @@ const PORTFOLIO_DATA = {
           "label": "ROI GMV Max trên TikTok Shop"
         }
       ],
-      "avatar": "assets/images/viet-avatar_cropped_jpg_1790133466675.jpg"
+      "avatar": "assets/images/intern_Marketing__2__cropped_jpg_1791365154973.jpg"
     },
     "about": {
       "tag": "TRIẾT LÝ & ĐỊNH VỊ",
@@ -622,7 +622,7 @@ const PORTFOLIO_DATA = {
           "label": "TikTok Shop GMV Max ROI"
         }
       ],
-      "avatar": "assets/images/viet-avatar_cropped_jpg_1790133466675.jpg"
+      "avatar": "assets/images/intern_Marketing__2__cropped_jpg_1791365154973.jpg"
     },
     "about": {
       "tag": "PHILOSOPHY & POSITIONING",
