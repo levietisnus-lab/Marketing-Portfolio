@@ -86,9 +86,8 @@
           el.innerHTML = `<i class="ri-fire-line"></i> ${val}`;
         } else if (key === 'hero.btnContact') {
           el.innerHTML = `<i class="ri-chat-smile-2-line"></i> ${val}`;
-        } else if (key === 'footer.backToTop') {
-          el.innerHTML = `<i class="ri-arrow-up-line"></i> ${val}`;
         } else {
+          // (footer.backToTop is a <span> inside a link that already has its arrow icon)
           el.textContent = val;
         }
       }
