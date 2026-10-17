@@ -50,6 +50,7 @@
   const modalTagsRow = document.getElementById('modal-tags-row');
   const modalChallengeTitle = document.getElementById('modal-challenge-title');
   const modalStrategyTitle = document.getElementById('modal-strategy-title');
+  const modalResultsTitle = document.getElementById('modal-results-title');
   const modalRoleRow = document.getElementById('modal-role-row');
   const modalLearningsSection = document.getElementById('modal-learnings-section');
   const modalLearningsList = document.getElementById('modal-learnings-list');
@@ -110,10 +111,13 @@
 
     // Modal Titles
     if (modalChallengeTitle) {
-      modalChallengeTitle.innerHTML = `<i class="ri-flag-2-line"></i> ${dict.modal.challengeTitle}`;
+      modalChallengeTitle.innerHTML = `<i class="ri-focus-3-line"></i> ${dict.modal.challengeTitle}`;
     }
     if (modalStrategyTitle) {
-      modalStrategyTitle.innerHTML = `<i class="ri-compass-3-line"></i> ${dict.modal.strategyTitle}`;
+      modalStrategyTitle.innerHTML = `<i class="ri-list-check-2"></i> ${dict.modal.strategyTitle}`;
+    }
+    if (modalResultsTitle && dict.modal.resultsTitle) {
+      modalResultsTitle.innerHTML = `<i class="ri-trophy-line"></i> ${dict.modal.resultsTitle}`;
     }
     if (modalLearningsTitle && dict.modal.learningsTitle) {
       modalLearningsTitle.innerHTML = `<i class="ri-lightbulb-flash-line"></i> ${dict.modal.learningsTitle}`;
@@ -475,7 +479,11 @@
     modalCategory.textContent = dict.projects.filterCategories[project.category] || project.category;
     modalHeroMetric.innerHTML = `<i class="ri-pulse-line"></i> ${project.heroMetric}`;
     modalTitle.textContent = project.title;
-    modalObjective.textContent = project.objective;
+    if (project.objective) {
+      modalObjective.innerHTML = project.objective.replace(/\n/g, '<br>');
+    } else {
+      modalObjective.textContent = '';
+    }
 
     // Metrics grid
     modalMetricsGrid.innerHTML = '';
@@ -507,11 +515,16 @@
     });
     modalRoleRow.style.display = modalRoleRow.children.length ? '' : 'none';
 
-    // Strategy bullet items
+    // Strategy bullet items (Execution Steps)
     modalStrategyList.innerHTML = '';
     project.strategy.forEach(st => {
       const li = document.createElement('li');
-      li.textContent = st;
+      const parts = st.split(/:\s*(.*)/s);
+      if (parts.length > 1) {
+        li.innerHTML = `<strong>${parts[0]}:</strong> ${parts[1]}`;
+      } else {
+        li.textContent = st;
+      }
       modalStrategyList.appendChild(li);
     });
 

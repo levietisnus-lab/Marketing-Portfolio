@@ -1703,6 +1703,15 @@ button {
   font-size: 1.1rem;
 }
 
+.modal-strategy-list strong {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+body.light-theme .modal-strategy-list strong {
+  color: #007799 !important;
+}
+
 /* Modal Role & Timeline Row */
 .modal-role-row {
   display: grid;
