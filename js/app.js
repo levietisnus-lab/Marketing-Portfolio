@@ -135,7 +135,7 @@
       item.className = 'stat-item';
       item.innerHTML = `
         <div class="stat-number">
-          <span class="counter" data-target="${st.value}">0</span>${st.suffix}
+          ${st.prefix || ''}<span class="counter" data-target="${st.value}">0</span>${st.suffix}
         </div>
         <div class="stat-label">${st.label}</div>
       `;
@@ -241,6 +241,7 @@
 
     // 3. Category alias mapping
     const aliases = {
+      automation: ['automation', 'aicrmautomation', 'ai', 'crm', 'chatbot', 'zalominiapp', 'loyalty', 'qrcode'],
       campaign: ['campaign', 'digitalcampaign', 'digital', 'chiendich'],
       content: ['content', 'viralvideomedia', 'viralvideo', 'media', 'video', 'noidung'],
       growth: ['growth', 'brandgrowth', 'brand', 'branding', 'thuonghieu'],

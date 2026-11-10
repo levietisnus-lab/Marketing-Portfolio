@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0d1730" />
+      <stop offset="100%" stop-color="#081021" />
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="purplePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="cardSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#152238" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#0c1526" stop-opacity="0.92" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Pattern -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="750" />
+    <line x1="400" y1="0" x2="400" y2="750" />
+    <line x1="600" y1="0" x2="600" y2="750" />
+    <line x1="800" y1="0" x2="800" y2="750" />
+    <line x1="1000" y1="0" x2="1000" y2="750" />
+  </g>
+
+  <!-- Ambient Glows -->
+  <circle cx="220" cy="180" r="180" fill="#00f2fe" opacity="0.09" filter="url(#glow)" />
+  <circle cx="960" cy="520" r="210" fill="#a855f7" opacity="0.09" filter="url(#glow)" />
+
+  <!-- Top Header Banner -->
+  <rect x="60" y="42" width="320" height="36" rx="18" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1.2" />
+  <text x="220" y="65" fill="#00f2fe" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="1.5">FUJIWA VIETNAM · AI &amp; CRM ECOSYSTEM</text>
+
+  <text x="60" y="122" fill="#ffffff" font-family="Outfit, sans-serif" font-size="34" font-weight="800">Easy AI Chatbot · Automation · Zalo Mini App · QR Data</text>
+
+  <!-- ==================== 1. EASY AI OMNICHANNEL CHATBOT (TOP LEFT) ==================== -->
+  <g transform="translate(60, 160)">
+    <rect width="510" height="245" rx="20" fill="url(#cardSurface)" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1.5" />
+    <rect x="24" y="22" width="46" height="46" rx="12" fill="url(#cyanBlue)" />
+    <text x="47" y="52" fill="#06101e" font-family="Outfit, sans-serif" font-size="20" font-weight="900" text-anchor="middle">AI</text>
+    <text x="86" y="42" fill="#ffffff" font-family="Outfit, sans-serif" font-size="20" font-weight="700">Easy AI Omnichannel Chatbot</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="500">Tích hợp đồng bộ nền tảng bán hàng &amp; Mạng xã hội 24/7</text>
+
+    <!-- Channel Pills -->
+    <g transform="translate(24, 90)">
+      <rect x="0" y="0" width="105" height="34" rx="10" fill="rgba(59, 130, 246, 0.18)" stroke="#3b82f6" stroke-width="1" />
+      <text x="52.5" y="22" fill="#93c5fd" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Meta Pages</text>
+
+      <rect x="118" y="0" width="105" height="34" rx="10" fill="rgba(0, 242, 254, 0.16)" stroke="#00f2fe" stroke-width="1" />
+      <text x="170.5" y="22" fill="#67e8f9" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Zalo OA</text>
+
+      <rect x="236" y="0" width="105" height="34" rx="10" fill="rgba(236, 72, 153, 0.16)" stroke="#ec4899" stroke-width="1" />
+      <text x="288.5" y="22" fill="#f9a8d4" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">TikTok / E-com</text>
+
+      <rect x="354" y="0" width="108" height="34" rx="10" fill="rgba(16, 185, 129, 0.16)" stroke="#10b981" stroke-width="1" />
+      <text x="408" y="22" fill="#6ee7b7" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Website Live</text>
+    </g>
+
+    <!-- Chat Flow Preview -->
+    <rect x="24" y="142" width="462" height="80" rx="12" fill="rgba(7, 11, 25, 0.65)" stroke="rgba(255,255,255,0.08)" />
+    <circle cx="48" cy="168" r="8" fill="#10b981" />
+    <text x="66" y="173" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Tư vấn tự động 24/7 · Phân luồng Lead B2B Đại lý &amp; Khách lẻ B2C</text>
+    <text x="66" y="198" fill="#38bdf8" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700">✓ Đồng bộ kịch bản sản phẩm Fujiwa &amp; đẩy dữ liệu trực tiếp về CRM</text>
+  </g>
+
+  <!-- ==================== 2. WORKFLOW AUTOMATION & LOYALTY (BOTTOM LEFT) ==================== -->
+  <g transform="translate(60, 430)">
+    <rect width="510" height="265" rx="20" fill="url(#cardSurface)" stroke="rgba(168, 85, 247, 0.38)" stroke-width="1.5" />
+    <rect x="24" y="22" width="46" height="46" rx="12" fill="url(#purplePink)" />
+    <text x="47" y="51" fill="#ffffff" font-family="Outfit, sans-serif" font-size="18" font-weight="900" text-anchor="middle">CRM</text>
+    <text x="86" y="42" fill="#ffffff" font-family="Outfit, sans-serif" font-size="20" font-weight="700">Customer Care · Remarketing · Loyalty</text>
+    <text x="86" y="64" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="500">Chuỗi Workflow tự động hóa nuôi dưỡng &amp; giữ chân khách hàng</text>
+
+    <!-- 3 Step Flow Nodes -->
+    <g transform="translate(24, 94)">
+      <rect x="0" y="0" width="142" height="105" rx="14" fill="rgba(168, 85, 247, 0.14)" stroke="#a855f7" stroke-width="1.2" />
+      <text x="71" y="30" fill="#d8b4fe" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">01. CARE FLOW</text>
+      <text x="71" y="55" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="12" text-anchor="middle">Onboarding &amp; Hỏi thăm</text>
+      <text x="71" y="75" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">sau mua tự động</text>
+
+      <!-- Arrow 1 -->
+      <path d="M 146 52 L 160 52" stroke="#00f2fe" stroke-width="2" />
+
+      <rect x="162" y="0" width="142" height="105" rx="14" fill="rgba(0, 242, 254, 0.13)" stroke="#00f2fe" stroke-width="1.2" />
+      <text x="233" y="30" fill="#67e8f9" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">02. REMARKETING</text>
+      <text x="233" y="55" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="12" text-anchor="middle">Nhắc lịch đặt nước</text>
+      <text x="233" y="75" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">theo chu kỳ tiêu dùng</text>
+
+      <!-- Arrow 2 -->
+      <path d="M 308 52 L 322 52" stroke="#10b981" stroke-width="2" />
+
+      <rect x="324" y="0" width="138" height="105" rx="14" fill="rgba(16, 185, 129, 0.14)" stroke="#10b981" stroke-width="1.2" />
+      <text x="393" y="30" fill="#6ee7b7" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">03. LOYALTY</text>
+      <text x="393" y="55" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="12" text-anchor="middle">Tích điểm đổi quà</text>
+      <text x="393" y="75" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">&amp; Hạng thành viên VIP</text>
+    </g>
+
+    <text x="24" y="236" fill="#cbd5e1" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">⚡ Tối ưu tỷ lệ mua lặp lại (Retention) &amp; Giá trị vòng đời khách hàng (LTV)</text>
+  </g>
+
+  <!-- ==================== 3. ZALO MINI APP UI BRIEF (RIGHT COLUMN) ==================== -->
+  <g transform="translate(605, 160)">
+    <rect width="290" height="535" rx="28" fill="url(#cardSurface)" stroke="rgba(0, 242, 254, 0.4)" stroke-width="2" />
+    <!-- Phone Notch -->
+    <rect x="95" y="14" width="100" height="18" rx="9" fill="#070b19" />
+
+    <!-- Mini App Header -->
+    <rect x="20" y="46" width="250" height="72" rx="16" fill="url(#cyanBlue)" />
+    <text x="40" y="76" fill="#06101e" font-family="Outfit, sans-serif" font-size="17" font-weight="900">ZALO MINI APP</text>
+    <text x="40" y="98" fill="#0f2942" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700">Fujiwa Loyalty &amp; Quick Order UI</text>
+
+    <!-- Member Points Card -->
+    <rect x="20" y="132" width="250" height="84" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+    <text x="36" y="158" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">HẠNG THÀNH VIÊN GOLD</text>
+    <text x="36" y="190" fill="#00f2fe" font-family="Outfit, sans-serif" font-size="26" font-weight="800">2,450 Điểm</text>
+    <rect x="178" y="164" width="76" height="30" rx="8" fill="#10b981" />
+    <text x="216" y="184" fill="#051b14" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Đổi Quà</text>
+
+    <!-- Mini App Feature Grid (Brief UI Wireframe) -->
+    <rect x="20" y="232" width="118" height="92" rx="14" fill="rgba(0, 242, 254, 0.1)" stroke="rgba(0, 242, 254, 0.3)" />
+    <text x="79" y="274" fill="#67e8f9" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Quét QR</text>
+    <text x="79" y="296" fill="#cbd5e1" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Tích điểm ngay</text>
+
+    <rect x="152" y="232" width="118" height="92" rx="14" fill="rgba(168, 85, 247, 0.1)" stroke="rgba(168, 85, 247, 0.3)" />
+    <text x="211" y="274" fill="#d8b4fe" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Đặt Nước</text>
+    <text x="211" y="296" fill="#cbd5e1" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Giao nhanh 2h</text>
+
+    <rect x="20" y="338" width="118" height="92" rx="14" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" />
+    <text x="79" y="380" fill="#6ee7b7" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Kho Voucher</text>
+    <text x="79" y="402" fill="#cbd5e1" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Ưu đãi cá nhân</text>
+
+    <rect x="152" y="338" width="118" height="92" rx="14" fill="rgba(236, 72, 153, 0.1)" stroke="rgba(236, 72, 153, 0.3)" />
+    <text x="211" y="380" fill="#f9a8d4" font-family="Outfit, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Tìm Đại Lý</text>
+    <text x="211" y="402" fill="#cbd5e1" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Định vị gần nhất</text>
+
+    <!-- Bottom UI Brief Caption -->
+    <rect x="20" y="448" width="250" height="62" rx="12" fill="rgba(7, 11, 25, 0.7)" />
+    <text x="145" y="475" fill="#ffffff" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Brief UI/UX &amp; User Flow</text>
+    <text x="145" y="495" fill="#38bdf8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Trải nghiệm 1 chạm trên Zalo</text>
+  </g>
+
+  <!-- ==================== 4. QR CODE DATA COLLECTION (FAR RIGHT) ==================== -->
+  <g transform="translate(920, 160)">
+    <rect width="220" height="535" rx="20" fill="url(#cardSurface)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1.5" />
+    <text x="110" y="44" fill="#6ee7b7" font-family="Outfit, sans-serif" font-size="18" font-weight="800" text-anchor="middle">QR CODE O2O</text>
+    <text x="110" y="66" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Thu thập First-Party Data</text>
+
+    <!-- Stylized QR Code Box -->
+    <rect x="35" y="92" width="150" height="150" rx="16" fill="#ffffff" />
+    <rect x="50" y="107" width="38" height="38" rx="6" fill="#070b19" />
+    <rect x="58" y="115" width="22" height="22" rx="3" fill="#00f2fe" />
+    <rect x="132" y="107" width="38" height="38" rx="6" fill="#070b19" />
+    <rect x="140" y="115" width="22" height="22" rx="3" fill="#00f2fe" />
+    <rect x="50" y="189" width="38" height="38" rx="6" fill="#070b19" />
+    <rect x="58" y="197" width="22" height="22" rx="3" fill="#10b981" />
+    <rect x="100" y="107" width="18" height="18" fill="#070b19" />
+    <rect x="100" y="138" width="22" height="22" fill="#a855f7" />
+    <rect x="50" y="156" width="38" height="18" fill="#070b19" />
+    <rect x="132" y="156" width="38" height="32" fill="#070b19" />
+    <rect x="102" y="172" width="20" height="55" fill="#070b19" />
+    <rect x="132" y="202" width="38" height="25" fill="#10b981" />
+
+    <!-- Funnel Steps inside QR Card -->
+    <g transform="translate(20, 268)">
+      <rect width="180" height="62" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+      <text x="90" y="26" fill="#ffffff" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">1. Quét QR trên Chai/Thùng</text>
+      <text x="90" y="46" fill="#94a3b8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Điểm bán, Sự kiện, Bao bì</text>
+
+      <rect y="78" width="180" height="62" rx="12" fill="rgba(0, 242, 254, 0.1)" stroke="rgba(0, 242, 254, 0.28)" />
+      <text x="90" y="104" fill="#67e8f9" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2. Định Danh Trên Mini App</text>
+      <text x="90" y="124" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Thu thập Tên, SĐT, Khu vực</text>
+
+      <rect y="156" width="180" height="72" rx="12" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.35)" />
+      <text x="90" y="182" fill="#6ee7b7" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3. Nuôi Dưỡng Tự Động</text>
+      <text x="90" y="202" fill="#e2e8f0" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Kích hoạt Loyalty &amp; Re-order</text>
+    </g>
+  </g>
+</svg>
+

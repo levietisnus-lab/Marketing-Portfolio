@@ -20,14 +20,14 @@ const PORTFOLIO_DATA = {
       "name": "Lê Đức Việt",
       "role": "Digital Marketing Executive",
       "subRole": "Performance & Growth Marketing | 2+ Năm Thực Chiến",
-      "bio": "2+ năm kinh nghiệm thực chiến vận hành Paid Ads (Meta, TikTok Shop GMV Max), xây dựng phễu lead B2B đo lường đến tận đơn chốt, và quản lý mạng lưới KOC/Affiliate. Tập trung vào tối ưu chi phí (CPL/CAC), tăng trưởng ROAS và đo lường chuyển đổi thực tế.",
+      "bio": "2+ năm kinh nghiệm thực chiến vận hành Paid Ads (Meta, TikTok Shop GMV Max), quản lý ngân sách quảng cáo 80 – 400Tr/tháng. Trực tiếp xây dựng phễu lead B2B chốt đại lý, tích hợp AI Chatbot & CRM/Zalo Mini App, và điều phối mạng lưới KOC/Affiliate tối ưu CPL/CAC & ROAS.",
       "btnProjects": "Xem Case Studies",
       "btnContact": "Liên hệ hợp tác",
       "stats": [
         {
-          "value": 1500,
-          "suffix": "+",
-          "label": "MQLs Đạt Chuẩn (Lead B2B & B2C)"
+          "value": 80,
+          "suffix": "-400Tr/tháng",
+          "label": "Ngân Sách Ads Quản Lý"
         },
         {
           "value": 53,
@@ -121,9 +121,10 @@ const PORTFOLIO_DATA = {
     "projects": {
       "tag": "CASE STUDIES THỰC CHIẾN",
       "title": "Case Studies Thực Chiến",
-      "subtitle": "Chi tiết 6 dự án thực tế: Mục tiêu cốt lõi (Key Objectives), Các bước triển khai (Steps), Thành tựu đo lường (Achievements) và Bài học thực tiễn.",
+      "subtitle": "Chi tiết 7 dự án thực tế: Mục tiêu cốt lõi (Key Objectives), Các bước triển khai (Steps), Thành tựu đo lường (Achievements) và Bài học thực tiễn.",
       "filterAll": "Tất cả",
       "filterCategories": {
+        "automation": "AI & CRM Automation",
         "performance": "Performance & Lead Gen",
         "ecommerce": "TikTok Shop & E-com",
         "planning": "Market Planning",
@@ -133,6 +134,55 @@ const PORTFOLIO_DATA = {
       },
       "viewDetail": "Xem Case Study Chi Tiết",
       "list": [
+        {
+          "id": "fujiwa-ai-crm-loyalty",
+          "category": "automation",
+          "title": "Tích Hợp AI Chatbot Đa Kênh (Easy AI), Zalo Mini App & Hệ Thống CRM Loyalty O2O Cho Fujiwa Việt Nam",
+          "client": "Fujiwa Việt Nam",
+          "period": "02/2026 – 05/2026",
+          "role": "Project Lead / Digital Marketing Executive – Quản lý trực tiếp & triển khai dự án cùng Easy AI, thiết kế workflow chăm sóc khách hàng, remarketing automation & loyalty, brief giao diện Zalo Mini App và lập kế hoạch thu thập thông tin khách hàng bằng QR Code.",
+          "image": "assets/images/case-fujiwa-ai-crm-loyalty.svg",
+          "heroMetric": "Easy AI Omnichannel | Zalo Mini App & QR O2O",
+          "highlight": "Quản lý trực tiếp dự án tích hợp Easy AI Chatbot đa kênh, xây dựng workflow CSKH – Remarketing Automation – Loyalty, brief UI/UX Zalo Mini App và lập kế hoạch thu thập dữ liệu khách hàng bằng QR Code.",
+          "objective": "• Bối cảnh: Fujiwa Việt Nam mở rộng hệ thống bán hàng đa kênh (Mạng xã hội, Sàn TMĐT, Website) song song với mạng lưới đại lý và điểm bán offline trên toàn quốc.\n• Bài toán: Lượng tin nhắn khách hàng đổ về từ nhiều nền tảng bị phân tán, phản hồi thủ công dễ trễ giờ cao điểm; dữ liệu người mua lẻ tại đại lý/điểm bán offline chưa được thu thập về một nguồn tập trung để chăm sóc lại (Remarketing) và giữ chân khách hàng (Loyalty).\n• Key Objectives: (1) Quản lý trực tiếp và triển khai cùng đối tác Easy AI tích hợp AI Chatbot vào các nền tảng bán hàng & mạng xã hội của Fujiwa Việt Nam; (2) Thiết kế hệ thống workflow chăm sóc khách hàng, remarketing automation và loyalty khép kín; (3) Xây dựng bản Brief giao diện (UI/UX) và luồng trải nghiệm Zalo Mini App; (4) Lên kế hoạch thu thập thông tin khách hàng (First-party Data) bằng mã QR Code kết nối Offline-to-Online (O2O).",
+          "strategy": [
+            "Bước 1 – Quản lý trực tiếp & triển khai tích hợp Easy AI Chatbot đa kênh: Làm việc trực tiếp với đội ngũ kỹ thuật Easy AI để tích hợp AI Chatbot vào toàn bộ các nền tảng bán hàng và mạng xã hội của Fujiwa Việt Nam (Facebook Fanpage, Messenger, Zalo OA, TikTok Shop, Website); xây dựng kho kịch bản tri thức sản phẩm (nước i-on kiềm, bình 19L, nước súc miệng, Fujiwa Speed), tự động tư vấn 24/7, phân loại nhu cầu sỉ/lẻ và đồng bộ thông tin khách hàng về CRM.",
+            "Bước 2 – Thiết kế Workflow Chăm sóc khách hàng, Remarketing Automation & Loyalty: Xây dựng sơ đồ luồng tự động hóa theo hành trình khách hàng: (a) CSKH tự động sau mua (xác nhận đơn, hướng dẫn sử dụng, khảo sát mức độ hài lòng); (b) Remarketing Automation tự động nhắn nhắc lịch đặt nước định kỳ theo chu kỳ tiêu dùng (7 ngày – 14 ngày – 30 ngày) và kịch bản kích hoạt lại khách hàng ngủ đông kèm voucher cá nhân hóa; (c) Phân hạng thành viên Loyalty (Member / Silver / Gold / VIP) tích điểm đổi quà để tăng tỷ lệ mua lặp lại (Retention & LTV).",
+            "Bước 3 – Brief giao diện (UI/UX) & luồng trải nghiệm Zalo Mini App: Lên khung Wireframe và viết tài liệu Brief giao diện chi tiết cho Zalo Mini App Fujiwa: Màn hình trang chủ hiển thị thẻ thành viên điện tử & số điểm tích lũy, tính năng quét mã QR tích điểm nhanh, danh mục đặt nước giao tận nơi chọn đại lý gần nhất, kho đổi quà/voucher và trung tâm thông báo ZNS.",
+            "Bước 4 – Lên kế hoạch thu thập thông tin khách hàng bằng QR Code (O2O Data Collection): Thiết kế chiến dịch thu thập First-party Data thông qua mã QR gắn trực tiếp trên thùng/chai nước, cổ bình 19L, POSM tại điểm bán đại lý và sự kiện dùng thử; chuẩn hóa luồng 'Quét mã QR → Truy cập Zalo Mini App / Chatbot → Xác thực SĐT nhận ưu đãi / Tích điểm → Lưu trữ hồ sơ khách hàng & phân nhóm tự động đẩy vào phễu Remarketing'."
+          ],
+          "results": [
+            {
+              "val": "24/7",
+              "label": "Easy AI Chatbot phản hồi đa kênh"
+            },
+            {
+              "val": "3 Luồng",
+              "label": "Workflow CSKH, Remarketing & Loyalty"
+            },
+            {
+              "val": "Zalo Mini App",
+              "label": "Hoàn thiện UI/UX Brief & User Flow"
+            },
+            {
+              "val": "QR Code O2O",
+              "label": "Kế hoạch thu thập First-party Data"
+            }
+          ],
+          "learnings": [
+            "Kết hợp AI Chatbot đa kênh (Easy AI) cùng Zalo Mini App và QR Code trên bao bì giúp thương hiệu FMCG phá bỏ rào cản đứt gãy dữ liệu giữa kênh bán điểm đại lý truyền thống (Offline) và hệ thống chăm sóc khách hàng số (Online).",
+            "Bước tiếp theo: Mở rộng kịch bản cá nhân hóa bằng AI dựa trên tần suất quét mã QR thực tế của từng hộ gia đình/văn phòng để tự động đề xuất gói thuê bao giao nước định kỳ (Subscription Model)."
+          ],
+          "tags": [
+            "Easy AI Chatbot",
+            "Marketing Automation",
+            "CRM & Loyalty",
+            "Zalo Mini App UI Brief",
+            "QR Code O2O Data"
+          ],
+          "desc": "Quản lý trực tiếp dự án tích hợp Easy AI Chatbot đa kênh, xây dựng workflow CSKH – Remarketing Automation – Loyalty, brief UI/UX Zalo Mini App và lập kế hoạch thu thập dữ liệu khách hàng bằng QR Code.",
+          "shortDesc": "Quản lý trực tiếp dự án tích hợp Easy AI Chatbot đa kênh, xây dựng workflow CSKH – Remarketing Automation – Loyalty, brief UI/UX Zalo Mini App và lập kế hoạch thu thập dữ liệu khách hàng bằng QR Code."
+        },
         {
           "id": "fujiwa-dealer-leadgen",
           "category": "performance",
@@ -490,6 +540,14 @@ const PORTFOLIO_DATA = {
           "icon": "ri-cpu-line",
           "skills": [
             {
+              "name": "Tích hợp AI Chatbot đa kênh (Easy AI) & Zalo Mini App Brief",
+              "icon": "ri-robot-2-line"
+            },
+            {
+              "name": "Workflow CSKH, Remarketing Automation, Loyalty & QR O2O",
+              "icon": "ri-loop-right-line"
+            },
+            {
               "name": "Custom Dashboard KPI (Google Sheets & Claude AI)",
               "icon": "ri-dashboard-3-line"
             },
@@ -504,10 +562,6 @@ const PORTFOLIO_DATA = {
             {
               "name": "Nghiên cứu thị trường & Chân dung khách hàng",
               "icon": "ri-user-search-line"
-            },
-            {
-              "name": "Prompt Engineering ứng dụng phân tích dữ liệu",
-              "icon": "ri-robot-2-line"
             }
           ]
         }
@@ -522,7 +576,7 @@ const PORTFOLIO_DATA = {
           "year": "02/2026 – 05/2026",
           "role": "Digital Marketing Executive",
           "company": "Fujiwa Việt Nam",
-          "desc": "Quản lý ngân sách gần 200 triệu cho Meta Ads tuyển đại lý B2B (CPL < 130K, 53 đại lý chốt); vận hành TikTok Shop GMV Max (ROI 10.6x), điều phối mạng lưới 28+ KOC/Affiliate và chiến dịch ra mắt Fujiwa Speed."
+          "desc": "Quản lý trực tiếp dự án tích hợp Easy AI Chatbot vào các nền tảng bán hàng & MXH; xây dựng workflow CSKH, remarketing automation & loyalty; brief giao diện Zalo Mini App và lập kế hoạch thu thập dữ liệu khách hàng bằng QR Code. Đồng thời vận hành Meta Ads tuyển đại lý B2B (CPL < 130K, 53 đại lý chốt), TikTok Shop GMV Max (ROI 10.6x), mạng lưới 28+ KOC/Affiliate và ra mắt Fujiwa Speed."
         },
         {
           "year": "05/2025 – 01/2026",
@@ -604,14 +658,15 @@ const PORTFOLIO_DATA = {
       "name": "Le Duc Viet",
       "role": "Digital Marketing Executive",
       "subRole": "Performance & Growth Marketing | 2+ YOE",
-      "bio": "Performance-driven Digital Marketing Executive with 2+ years of hands-on experience scaling Paid Ads (Meta, TikTok Shop GMV Max), building closed-loop B2B lead funnels, and managing KOC/Affiliate networks. Laser-focused on lowering CPL/CAC, boosting ROAS, and driving measurable revenue.",
+      "bio": "Performance-driven Digital Marketing Executive with 2+ years of hands-on experience scaling Paid Ads (Meta, TikTok Shop GMV Max), managing monthly ad budgets of $3,200–$16,000/month, building closed-loop B2B lead funnels, integrating omnichannel AI Chatbots & CRM/Zalo Mini App, and scaling KOC/Affiliate networks.",
       "btnProjects": "View Case Studies",
       "btnContact": "Get In Touch",
       "stats": [
         {
-          "value": 1500,
-          "suffix": "+",
-          "label": "Marketing Qualified Leads (MQLs)"
+          "prefix": "$",
+          "value": 3,
+          "suffix": ".2K–$16K/mo",
+          "label": "Monthly Ad Budget Managed (USD)"
         },
         {
           "value": 53,
@@ -705,9 +760,10 @@ const PORTFOLIO_DATA = {
     "projects": {
       "tag": "CASE STUDIES & MEASURED IMPACT",
       "title": "Featured Case Studies",
-      "subtitle": "Deep dive into 6 real campaigns: Key Objectives, Execution Steps, Measurable Achievements, and Key Takeaways.",
+      "subtitle": "Deep dive into 7 real campaigns: Key Objectives, Execution Steps, Measurable Achievements, and Key Takeaways.",
       "filterAll": "All",
       "filterCategories": {
+        "automation": "AI & CRM Automation",
         "performance": "Performance & Lead Gen",
         "ecommerce": "TikTok Shop & E-com",
         "planning": "Market Planning",
@@ -718,6 +774,55 @@ const PORTFOLIO_DATA = {
       "viewDetail": "View Full Case Study",
       "list": [
         {
+          "id": "fujiwa-ai-crm-loyalty",
+          "category": "automation",
+          "title": "Omnichannel AI Chatbot Integration (Easy AI), Zalo Mini App Brief & QR O2O CRM Loyalty for Fujiwa Vietnam",
+          "client": "Fujiwa Vietnam",
+          "period": "02/2026 – 05/2026",
+          "role": "Project Lead / Digital Marketing Executive – Directly managed Easy AI chatbot integration across sales & social channels, built customer care/remarketing automation/loyalty workflows, drafted Zalo Mini App UI/UX briefs, and planned QR Code customer data collection.",
+          "image": "assets/images/case-fujiwa-ai-crm-loyalty.svg",
+          "heroMetric": "Easy AI Omnichannel | Zalo Mini App & QR O2O",
+          "highlight": "Directly managed Easy AI omnichannel chatbot integration, designed automated Customer Care – Remarketing – Loyalty workflows, briefed the Zalo Mini App UI/UX, and planned O2O customer data collection via QR Code.",
+          "objective": "• Context: Fujiwa Vietnam rapidly expanded its omnichannel footprint across social platforms, e-commerce marketplaces, and nationwide offline dealership touchpoints.\n• Challenge: High volumes of inbound customer inquiries across disparate channels led to manual response bottlenecks, while offline retail consumer data remained disconnected from centralized CRM remarketing and loyalty retention.\n• Key Objectives: (1) Directly manage and deploy the Easy AI project to integrate AI Chatbots across Fujiwa Vietnam's sales and social media platforms; (2) Architect end-to-end workflows for customer care, remarketing automation, and loyalty; (3) Develop the UI/UX design brief and user flow for the Fujiwa Zalo Mini App; (4) Plan first-party customer data collection via QR Codes across offline and online touchpoints.",
+          "strategy": [
+            "Step 1 – Direct Project Management & Easy AI Omnichannel Chatbot Integration: Partnered directly with Easy AI engineers to integrate AI Chatbots across Fujiwa Vietnam's sales and social channels (Facebook Fanpage, Messenger, Zalo OA, TikTok Shop, Website); structured product knowledge bases, automated 24/7 consultation, segmented B2B vs. B2C intent, and synced customer profiles into CRM.",
+            "Step 2 – Customer Care, Remarketing Automation & Loyalty Workflow Architecture: Engineered automated lifecycle flows: (a) Post-purchase care (order confirmation, usage guides, satisfaction check-ins); (b) Remarketing Automation triggered by water consumption cycles (7-day, 14-day, 30-day refill reminders) and win-back sequences with personalized vouchers; (c) Tiered Loyalty program (Member / Silver / Gold / VIP) with point accumulation and reward redemption to maximize retention and LTV.",
+            "Step 3 – Zalo Mini App UI/UX Brief & User Journey Design: Authored the comprehensive UI/UX Brief and screen wireframes for the Fujiwa Zalo Mini App: Home dashboard displaying digital membership card & loyalty points, 1-tap QR code scanner for point collection, quick water ordering routed to the nearest dealer, voucher reward catalog, and automated ZNS notifications.",
+            "Step 4 – QR Code Customer Data Collection Plan (O2O First-Party Data): Formulated the Offline-to-Online data capture strategy using smart QR codes printed on bottle cartons, 19L gallon necks, dealer POSM standees, and sampling booths; standardized the conversion flow: 'Scan QR → Open Zalo Mini App / AI Chatbot → Verify phone for instant reward / points → Tag customer segment into automated Remarketing & Loyalty workflows'."
+          ],
+          "results": [
+            {
+              "val": "24/7",
+              "label": "Easy AI Omnichannel Chatbot"
+            },
+            {
+              "val": "3 Flows",
+              "label": "Care, Remarketing & Loyalty Automation"
+            },
+            {
+              "val": "Zalo Mini App",
+              "label": "Complete UI/UX Brief & Wireframe Flow"
+            },
+            {
+              "val": "QR Code O2O",
+              "label": "First-Party Data Collection Plan"
+            }
+          ],
+          "learnings": [
+            "Unifying Easy AI omnichannel chatbots with a Zalo Mini App and on-pack QR Codes bridges the gap between traditional offline FMCG dealership purchases and automated digital CRM retention.",
+            "Next Steps: Leverage AI-driven consumption frequency analysis from QR scan intervals to proactively recommend recurring home/office water subscription packages."
+          ],
+          "tags": [
+            "Easy AI Chatbot",
+            "Marketing Automation",
+            "CRM & Loyalty",
+            "Zalo Mini App UI Brief",
+            "QR Code O2O Data"
+          ],
+          "desc": "Directly managed Easy AI omnichannel chatbot integration, designed automated Customer Care – Remarketing – Loyalty workflows, briefed the Zalo Mini App UI/UX, and planned O2O customer data collection via QR Code.",
+          "shortDesc": "Directly managed Easy AI omnichannel chatbot integration, designed automated Customer Care – Remarketing – Loyalty workflows, briefed the Zalo Mini App UI/UX, and planned O2O customer data collection via QR Code."
+        },
+        {
           "id": "fujiwa-dealer-leadgen",
           "category": "performance",
           "title": "Nationwide Dealer & Distributor Recruitment for Fujiwa via a B2B Lead Funnel",
@@ -725,9 +830,9 @@ const PORTFOLIO_DATA = {
           "period": "02/2026 – 05/2026",
           "role": "Digital Marketing Executive – Planning, setup & Meta Ads optimization, collaborating with Sales Admin on pipeline tracking, and building custom KPI dashboards.",
           "image": "assets/images/case-fujiwa-dealer-leadgen.jpg",
-          "heroMetric": "CPL < 130K | 53 Closed Dealers",
-          "highlight": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < 130K with 53 closed partnerships.",
-          "objective": "• Context: Fujiwa needed to expand its nationwide dealer and distributor network for premium alkaline ionized water with an ad budget of ~200M VND.\n• Challenge: Target audience consists of dealership owners, grocery store proprietors, and pharmacy owners — small niche pool, long consideration cycle, requiring transparent commercial margins.\n• Key Objectives: (1) Keep CPL strictly below 150,000 VND; (2) Generate 600+ high-intent dealer leads; (3) Measure closed-loop attribution down to signed contracts (Close-won), avoiding vanity chat inquiries.",
+          "heroMetric": "CPL < $5.20 | 53 Closed Dealers",
+          "highlight": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < $5.20 with 53 closed partnerships.",
+          "objective": "• Context: Fujiwa needed to expand its nationwide dealer and distributor network for premium alkaline ionized water with an ad budget of ~$8,000 USD.\n• Challenge: Target audience consists of dealership owners, grocery store proprietors, and pharmacy owners — small niche pool, long consideration cycle, requiring transparent commercial margins.\n• Key Objectives: (1) Keep CPL strictly below $6.00 USD; (2) Generate 600+ high-intent dealer leads; (3) Measure closed-loop attribution down to signed contracts (Close-won), avoiding vanity chat inquiries.",
           "strategy": [
             "Step 1 – Geo-Targeting & Blank Adsets: Segmented campaigns across priority regional markets (South, Mekong Delta, Central Highlands) running alongside broad Blank targeting for Meta algorithms to locate prospective business owners; aggressively reallocated budget to lowest-cost lead zones.",
             "Step 2 – Commercial Offer & Creative Packaging: Collaborated with Design and Sales Admin to structure attractive wholesale packages (tiered margins, POSM display signage support, regional exclusive perks) as core ad hooks.",
@@ -740,8 +845,8 @@ const PORTFOLIO_DATA = {
               "label": "Inbound Prospective Dealer Leads"
             },
             {
-              "val": "< 130K",
-              "label": "Cost Per Lead (VND)"
+              "val": "< $5.20",
+              "label": "Cost Per Lead (USD)"
             },
             {
               "val": "312",
@@ -763,8 +868,8 @@ const PORTFOLIO_DATA = {
             "A/B Testing",
             "Sales Pipeline"
           ],
-          "desc": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < 130K with 53 closed partnerships.",
-          "shortDesc": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < 130K with 53 closed partnerships."
+          "desc": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < $5.20 with 53 closed partnerships.",
+          "shortDesc": "Engineered an end-to-end B2B lead generation funnel from Meta Ads to signed nationwide distributor contracts at CPL < $5.20 with 53 closed partnerships."
         },
         {
           "id": "agrizen-market-entry",
@@ -774,7 +879,7 @@ const PORTFOLIO_DATA = {
           "period": "05/2025 – 01/2026",
           "role": "Performance Marketing – Market research, buyer persona profiling, budget allocation, and Meta Ads management (Messenger, Video Views, Retargeting).",
           "image": "assets/images/case-agrizen-market-planning.jpg",
-          "heroMetric": "1.2B Peak Rev | CIR 37.86%",
+          "heroMetric": "$48K Peak Rev | CIR 37.86%",
           "highlight": "Niche market entry strategy against corporate legacy giants: Pinpoint regional focus, verifiable USP, and a Messenger conversion funnel delivering 34.4% close rate.",
           "objective": "• Context: Established legacy fertilizers (Phu My, Ca Mau, Con Co) dominated traditional dealer shelves, while widespread counterfeit organic products on social media severely undermined farmer trust.\n• Challenge: As an emerging brand with a focused budget, Agrizen could not afford untargeted nationwide blanket ads.\n• Key Objectives: (1) Successfully penetrate 2 strategic agricultural niches; (2) Maintain CIR (Cost-to-Income Ratio) below 40%; (3) Achieve a Messenger consultation close rate > 30% with high seasonal retention.",
           "strategy": [
@@ -838,11 +943,11 @@ const PORTFOLIO_DATA = {
               "label": "GMV Max ROI (Apr 2026)"
             },
             {
-              "val": "43.8M",
-              "label": "Monthly GMV Max Revenue (VND)"
+              "val": "$1,750+",
+              "label": "Monthly GMV Max Revenue (USD)"
             },
             {
-              "val": "~19,900đ",
+              "val": "~$0.80",
               "label": "Ad Cost Per Completed Order"
             },
             {
@@ -921,9 +1026,9 @@ const PORTFOLIO_DATA = {
           "period": "02/2026 – 05/2026",
           "role": "Digital Marketing Executive – Content distribution strategy, brand awareness & engagement ad management across mother and sub-brand channels.",
           "image": "assets/images/project_velcity-beverage_cropped_jpg_1790144023829.jpg",
-          "heroMetric": "468K Views (+91%) | 200M Revenue",
+          "heroMetric": "468K Views (+91%) | $8K Revenue",
           "highlight": "Amplified mother brand corporate reach to validate dealer trust, while successfully orchestrating the market debut of Fujiwa Speed hydration.",
-          "objective": "• Context: Fujiwa launched its new electrolyte hydration line 'Fujiwa Speed' targeted at active youth, while concurrently scaling mother brand awareness to bolster dealer recruitment.\n• Challenge: Balancing two distinct audiences: building corporate credibility for prospective wholesale dealers versus dynamic, trend-driven lifestyle appeal for sports consumers.\n• Key Objectives: (1) Elevate mother brand page reach > 50% to build dealer confidence; (2) Grow the dedicated Fujiwa Speed page to 3,000 followers in 2 months; (3) Achieve 200M VND in product launch month sales.",
+          "objective": "• Context: Fujiwa launched its new electrolyte hydration line 'Fujiwa Speed' targeted at active youth, while concurrently scaling mother brand awareness to bolster dealer recruitment.\n• Challenge: Balancing two distinct audiences: building corporate credibility for prospective wholesale dealers versus dynamic, trend-driven lifestyle appeal for sports consumers.\n• Key Objectives: (1) Elevate mother brand page reach > 50% to build dealer confidence; (2) Grow the dedicated Fujiwa Speed page to 3,000 followers in 2 months; (3) Achieve $8,000 USD in product launch month sales.",
           "strategy": [
             "Step 1 – Dual-Channel Brand Segmentation: Positioned parent page 'Fujiwa Vietnam' around factory scale, Japanese technology, and dealer perks; positioned 'Fujiwa Speed' around vibrant sports culture, fitness, and vitality.",
             "Step 2 – Activation Campaign 'Power Speed – Reset Vibe': Rolled out short-form athletic workout reels, interactive engagement minigames, and instant mineral replenishment messaging.",
@@ -944,8 +1049,8 @@ const PORTFOLIO_DATA = {
               "label": "Fujiwa Speed Page Followers (2 Mos)"
             },
             {
-              "val": "200M",
-              "label": "Launch Month Revenue (VND)"
+              "val": "$8,000",
+              "label": "Launch Month Revenue (USD)"
             }
           ],
           "learnings": [
@@ -1074,6 +1179,14 @@ const PORTFOLIO_DATA = {
           "icon": "ri-cpu-line",
           "skills": [
             {
+              "name": "Omnichannel AI Chatbot (Easy AI) & Zalo Mini App Brief",
+              "icon": "ri-robot-2-line"
+            },
+            {
+              "name": "Customer Care, Remarketing Automation, Loyalty & QR O2O",
+              "icon": "ri-loop-right-line"
+            },
+            {
               "name": "Automated KPI Dashboards (Google Sheets & Claude AI)",
               "icon": "ri-dashboard-3-line"
             },
@@ -1088,10 +1201,6 @@ const PORTFOLIO_DATA = {
             {
               "name": "Market Intelligence & Buyer Persona Research",
               "icon": "ri-user-search-line"
-            },
-            {
-              "name": "Prompt Engineering for Marketing Automation & Analytics",
-              "icon": "ri-robot-2-line"
             }
           ]
         }
@@ -1106,13 +1215,13 @@ const PORTFOLIO_DATA = {
           "year": "02/2026 – 05/2026",
           "role": "Digital Marketing Executive",
           "company": "Fujiwa Vietnam",
-          "desc": "Managed ~200M VND Meta Ads budget for B2B dealer recruitment (CPL < 130K, 53 signed dealers); scaled TikTok Shop GMV Max (ROI 10.6x), coordinated 28+ KOC/Affiliate network, and spearheaded Fujiwa Speed launch."
+          "desc": "Directly managed Easy AI omnichannel chatbot integration across sales & social platforms; built customer care, remarketing automation & loyalty workflows; briefed Zalo Mini App UI/UX and planned QR Code customer data collection. Also managed ~$8,000 USD Meta Ads for B2B dealer recruitment (CPL < $5.20, 53 signed dealers), scaled TikTok Shop GMV Max (ROI 10.6x), coordinated 28+ KOCs, and launched Fujiwa Speed."
         },
         {
           "year": "05/2025 – 01/2026",
           "role": "Performance Marketing",
           "company": "Agrizen",
-          "desc": "Spearheaded agricultural market entry in Central Highlands & Mekong Delta via Meta Ads: Generated 1,223 MQLs, achieved 34.42% Messenger closing rate, and peaked at 1.2B VND monthly revenue."
+          "desc": "Spearheaded agricultural market entry in Central Highlands & Mekong Delta via Meta Ads: Generated 1,223 MQLs, achieved 34.42% Messenger closing rate, and peaked at $48,000 USD monthly revenue."
         },
         {
           "year": "10/2024 – 04/2025",

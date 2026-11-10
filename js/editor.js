@@ -1464,37 +1464,46 @@
     document.querySelectorAll('[contenteditable="true"]').forEach(el => syncElementToData(el));
 
     try {
+      const apiBases = ['http://localhost:3456', ''];
+      async function postEditorApi(endpoint, payload) {
+        for (const base of apiBases) {
+          if (!base && location.protocol === 'file:') continue;
+          try {
+            const res = await fetch(`${base}${endpoint}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+              body: JSON.stringify(payload)
+            });
+            if (res.ok) return await res.json();
+          } catch (e) {}
+        }
+        return null;
+      }
+
       // 1. Process pending image uploads to backend server
       for (const item of pendingImageUploads) {
         try {
-          const uploadRes = await fetch('/api/upload-image', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              filename: item.filename,
-              data: item.dataUrl
-            })
+          const uploadJson = await postEditorApi('/api/upload-image', {
+            filename: item.filename,
+            data: item.dataUrl
           });
 
-          if (uploadRes.ok) {
-            const uploadJson = await uploadRes.json();
-            if (uploadJson.success && uploadJson.url) {
-              const savedUrl = uploadJson.url;
+          if (uploadJson && uploadJson.success && uploadJson.url) {
+            const savedUrl = uploadJson.url;
 
-              if (item.targetType === 'avatar') {
-                if (typeof PORTFOLIO_DATA !== 'undefined') {
-                  if (PORTFOLIO_DATA.vi && PORTFOLIO_DATA.vi.hero) PORTFOLIO_DATA.vi.hero.avatar = savedUrl;
-                  if (PORTFOLIO_DATA.en && PORTFOLIO_DATA.en.hero) PORTFOLIO_DATA.en.hero.avatar = savedUrl;
-                }
-              } else if (item.targetType === 'project') {
-                ['vi', 'en'].forEach(lang => {
-                  if (PORTFOLIO_DATA && PORTFOLIO_DATA[lang] && PORTFOLIO_DATA[lang].projects && PORTFOLIO_DATA[lang].projects.list) {
-                    const proj = PORTFOLIO_DATA[lang].projects.list.find(p => p.id === item.id) ||
-                                 PORTFOLIO_DATA[lang].projects.list[item.index];
-                    if (proj) proj.image = savedUrl;
-                  }
-                });
+            if (item.targetType === 'avatar') {
+              if (typeof PORTFOLIO_DATA !== 'undefined') {
+                if (PORTFOLIO_DATA.vi && PORTFOLIO_DATA.vi.hero) PORTFOLIO_DATA.vi.hero.avatar = savedUrl;
+                if (PORTFOLIO_DATA.en && PORTFOLIO_DATA.en.hero) PORTFOLIO_DATA.en.hero.avatar = savedUrl;
               }
+            } else if (item.targetType === 'project') {
+              ['vi', 'en'].forEach(lang => {
+                if (PORTFOLIO_DATA && PORTFOLIO_DATA[lang] && PORTFOLIO_DATA[lang].projects && PORTFOLIO_DATA[lang].projects.list) {
+                  const proj = PORTFOLIO_DATA[lang].projects.list.find(p => p.id === item.id) ||
+                               PORTFOLIO_DATA[lang].projects.list[item.index];
+                  if (proj) proj.image = savedUrl;
+                }
+              });
             }
           }
         } catch (uploadErr) {
@@ -1506,17 +1515,9 @@
       // 2. Save complete PORTFOLIO_DATA to /api/save-content
       let serverSaved = false;
       try {
-        const saveRes = await fetch('/api/save-content', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ portfolioData: PORTFOLIO_DATA })
-        });
-
-        if (saveRes.ok) {
-          const saveJson = await saveRes.json();
-          if (saveJson.success) {
-            serverSaved = true;
-          }
+        const saveJson = await postEditorApi('/api/save-content', { portfolioData: PORTFOLIO_DATA });
+        if (saveJson && saveJson.success) {
+          serverSaved = true;
         }
       } catch (saveErr) {
         console.warn('Server backend save-content API unavailable, falling back to localStorage', saveErr);
@@ -1625,7 +1626,8 @@
           const normalizeProjCategory = (p) => {
             if (!p || !p.category) return;
             const normVal = (p.category || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (normVal.includes('campaign')) p.category = 'campaign';
+            if (normVal.includes('automation') || normVal.includes('chatbot') || normVal.includes('crm') || normVal.includes('loyalty')) p.category = 'automation';
+            else if (normVal.includes('campaign')) p.category = 'campaign';
             else if (normVal.includes('content') || normVal.includes('video') || normVal.includes('media')) p.category = 'content';
             else if (normVal.includes('growth') || normVal.includes('brand')) p.category = 'growth';
             else if (normVal.includes('performance') || normVal.includes('ads')) p.category = 'performance';

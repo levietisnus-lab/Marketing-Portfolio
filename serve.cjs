@@ -37,10 +37,12 @@ function readJsonBody(req, callback) {
 }
 
 const server = http.createServer((req, res) => {
-  // Enable CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Enable CORS & Private Network headers (supports file://, Live Server, and localhost:3456)
+  const origin = req.headers.origin || '*';
+  res.setHeader('Access-Control-Allow-Origin', origin === 'null' ? '*' : origin);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Private-Network', 'true');
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
 
   if (req.method === 'OPTIONS') {
